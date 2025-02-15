@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📌 Smart Attendance Platform
 
-## Getting Started
+## 🎯 Seamless, Secure & Effortless Attendance Tracking
+A modern attendance tracking system with role-based authentication, dynamic dashboard, and CRUD operations for managing students, teachers, and subjects efficiently.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Features
+✅ **Role-Based Authentication** (Admin, Class Incharge, Clerk)  
+✅ **Dynamic Dashboard** with tabs for Overview, Reports, Students, Subjects, and Teachers  
+✅ **CRUD Operations** for managing teachers, students, and subjects  
+✅ **Secure JWT Authentication** with role-based routing  
+✅ **ShadCN UI Components** for a clean and responsive design  
+✅ **MongoDB Database** (Using a free-tier cluster)  
+✅ **Server-Side & Client-Side Rendering** for optimized performance  
+
+---
+
+## 📁 Project Structure
+```
+📦 smart-attendance-platform
+ ┣ 📂 backend (Express.js API)
+ ┃ ┣ 📂 controllers
+ ┃ ┣ 📂 models
+ ┃ ┣ 📂 routes
+ ┃ ┣ 📂 middleware
+ ┃ ┣ 📜 server.js
+ ┃ ┗ 📜 config.js
+ ┃
+ ┣ 📂 frontend (Next.js App Router)
+ ┃ ┣ 📂 app
+ ┃ ┃ ┣ 📂 (auth)
+ ┃ ┃ ┃ ┗ 📜 login/page.jsx
+ ┃ ┃ ┣ 📂 (dashboard)
+ ┃ ┃ ┃ ┣ 📂 admin
+ ┃ ┃ ┃ ┣ 📂 classincharge
+ ┃ ┃ ┃ ┣ 📂 clerk
+ ┃ ┃ ┃ ┗ 📜 layout.jsx
+ ┃ ┃ ┣ 📂 components
+ ┃ ┃ ┣ 📂 hooks
+ ┃ ┃ ┣ 📂 utils
+ ┃ ┃ ┗ 📜 page.jsx
+ ┗ 📜 README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🛠️ Tech Stack
+- **Frontend**: Next.js (App Router), Tailwind CSS, ShadCN UI
+- **Backend**: Express.js, MongoDB, JWT Authentication
+- **State Management**: URL params (query state management)
+- **Database**: MongoDB (Mongoose ORM)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🚀 Installation & Setup
+### 🔹 Backend (Express.js API)
+```sh
+cd backend
+npm install
+npm start
+```
+> Runs the backend server on `http://localhost:3002`
 
-To learn more about Next.js, take a look at the following resources:
+### 🔹 Frontend (Next.js App)
+```sh
+cd frontend
+npm install
+npm run dev
+```
+> Runs the frontend on `http://localhost:3000`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔑 Role-Based Access
+| Role         | Access Rights |
+|-------------|--------------|
+| **Admin** | Full access (Manage Teachers, Students, Subjects, Reports) |
+| **Class Incharge** | Can manage students & view reports |
+| **Clerk** | Can view attendance reports |
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📌 API Endpoints (Backend)
+### 🔹 Authentication
+- `POST /api/v1/auth/login` → User Login (JWT Token)
+- `GET /api/v1/user/profile` → Get user profile info
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 🔹 Teachers CRUD
+- `GET /api/v1/teachers` → Fetch all teachers
+- `POST /api/v1/teachers` → Add a new teacher
+- `PUT /api/v1/teachers/:id` → Update teacher details
+- `DELETE /api/v1/teachers/:id` → Remove teacher
+
+---
+
+## 🎨 UI Preview
+![Dashboard Preview](https://via.placeholder.com/1000x500?text=Dashboard+Preview)
+
+---
+
+## 🤝 Contributing
+Feel free to contribute! Open an issue or submit a pull request. 😊
+
+---
+
+## 📜 License
+MIT License © 2025 Smart Attendance Platform
+
+---
+
+**🚀 Happy Coding!** 🎉
+

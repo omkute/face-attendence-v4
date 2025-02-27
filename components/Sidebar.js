@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation'
 import { Sidebar, SidebarHeader, SidebarContent, SidebarFooter, SidebarProvider} from './ui/sidebar'
 import { SemicircularBtn } from './SemicircularBtn';
 import { logout } from '../lib/user'; 
-import { LayoutDashboard, BarChart2, Users, BookOpen, Settings } from 'lucide-react';
+import { LayoutDashboard, ClipboardMinus,User,Contact, BarChart2, Users, BookOpen, Settings } from 'lucide-react';
 import useUserInfo from '@/hooks/useUserInfo';
 
 function SidebarComponent({ role }) {
@@ -20,10 +20,10 @@ function SidebarComponent({ role }) {
 const menuOptions = {
   admin: [
     { name: "Overview", path: "/admin/overview", icon: LayoutDashboard },
-    { name: "Reports", path: "/admin/reports", icon: LayoutDashboard },
-    { name: "Students", path: "/admin/students", icon: LayoutDashboard},
-    { name: "Subjects", path: "/admin/subjects", icon: LayoutDashboard },
-    { name: "Teachers", path: "/admin/teachers", icon: LayoutDashboard },
+    { name: "Reports", path: "/admin/reports", icon: ClipboardMinus },
+    { name: "Students", path: "/admin/students", icon: User},
+    { name: "Subjects", path: "/admin/subjects", icon: BookOpen },
+    { name: "Teachers", path: "/admin/teachers", icon: Contact },
   ],
   student: [
     { name: "Overview", path: "/dashboard/student", icon: LayoutDashboard },

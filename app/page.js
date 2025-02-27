@@ -8,7 +8,7 @@ export default function Home() {
   const router = useRouter();
 
   return (
-    <div className="container flex flex-col items-center space-y-8 justify-center min-h-screen bg-gradient-to-b from-background to-secondary/10">
+    <div className=" flex flex-col items-center space-y-8 justify-center min-h-screen bg-gradient-to-b from-background to-secondary/10">
       <div className="text-center space-y-4">
         <h1 className="text-6xl font-bold text-primary">
           Smart Attendance Platform
